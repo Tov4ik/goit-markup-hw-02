@@ -44,8 +44,8 @@ body {
 .logo span {
 	color: #2196F3
 }
-.header .link:hover,
-.header .link:focus {
+.link:hover,
+.link:focus {
 	color: #2196F3;
 
 }
@@ -80,6 +80,9 @@ margin-right: 50px;
 	line-height: 60px;
 	text-transform: uppercase;
 	color: #FFF;
+}
+.btn {
+	cursor: pointer;
 }
 .order-btn {
 	margin-top: 30px;
