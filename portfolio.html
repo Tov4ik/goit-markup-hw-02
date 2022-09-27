@@ -10,39 +10,37 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Portfolio</title>
   </head>
 
   <body>
-    <header>
-      <h1 class="logo"><a href="./index.html">WebStudio</a></h1>
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a href="./index.html">Студія</a></li>
-          <li class="navbar-item"><a href="./portfolio.html">Портфоліо</a></li>
-          <li class="navbar-item"><a href="#">Контакти</a></li>
-        </ul>
-      </nav>
-      <ul class="contacts">
-        <li class="header-email">
-          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
-        <li class="header-phone">
-          <a href="tell:+380961111111">+38 096 111 11 11</a>
-        </li>
-      </ul>
-    </header>
+		<div class="header-container">
+			<header class="header">
+				<h1 class="logo"><a class="link" href="./index.html"><span>Web</span>Studio</a></h1>
+				<nav class="navbar">
+					<ul class="list navbar-list">
+						<li class="navbar-item"><a class="link" href="./index.html">Студія</a></li>
+						<li class="navbar-item"><a class="link" href="./portfolio.html">Портфоліо</a></li>
+						<li class="navbar-item"><a class="link" href="#">Контакти</a></li>
+					</ul>
+				</nav>
+				<ul class="list contacts">
+					<li class="header-email"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+					<li class="header-phone"><a class="link" href="tell:+380961111111">+38 096 111 11 11</a></li>
+				</ul>
+			</header>
+		</div>
     <main>
       <section class="section projects">
-        <ul class="projects-sort-list">
+        <ul class="list projects-sort-list">
 					<li class="projects-sort-item"><button type="button" class="btn projects-sort-btn">Усі</button></li>
 					<li class="projects-sort-item"><button type="button" class="btn projects-sort-btn">Веб-сайти</button></li>
 					<li class="projects-sort-item"><button type="button" class="btn projects-sort-btn">Додатки</button></li>
 					<li class="projects-sort-item"><button type="button" class="btn projects-sort-btn">Дизайн</button></li>
 					<li class="projects-sort-item"><button type="button" class="btn projects-sort-btn">Маркетинг</button></li>
 				</ul>
-				<ul class="projects-card-list">
+				<ul class="list projects-card-list">
 					<li class="projects-card-item">
 						<div class="projects-card">
 							<img src="./images/projects/projects-0.jpg" width="370px" width="370px" alt="Веб-сайт" class="projects-card-image">
@@ -127,13 +125,15 @@
 				</ul>
       </section>
     </main>
-    <footer>
-      <p class="logo"><a href="#">WebStudio</a></p>
-      <address class="footer-address">
-        <p>м. Київ, пр-т Лесі Українки, 26</p>
-        <p><a href="mailto:info@devstudio.com">info@devstudio.com</a></p>
-        <p><a href="tel:+380961111111">+38 096 111 11 11</a></p>
-      </address>
-    </footer>
+    <div class="footer-container">
+			<footer class="footer">
+				<p class="logo footer-logo"><a class="link" href="./index.html"><span>Web</span>Studio</a></p>
+				<address class="footer-address">
+					<p>м. Київ, пр-т Лесі Українки, 26</p>
+					<p><a class="link footer-link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
+					<p><a class="link footer-link" href="tel:+380961111111">+38 096 111 11 11</a></p>
+				</address>
+			</footer>
+		</div>
   </body>
 </html>
