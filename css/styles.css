@@ -1,329 +1,194 @@
 :root {
-  --primary-font: 'Roboto', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
-  --primary-text-color: #434455;
-  --title-text-color: #2e2f42;
-  --accent-color: #4d5ae5;
-  --active-color: #404bbf;
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --primary-color: #2e2f42; /* Navy Blue */
+  --body-text-color: #434455; /* Slate */
+  --brand-color: #4d5ae5; /* Iris */
+  --pressed-color: #404bbf; /* Ocean */
   --white-color: #ffffff;
   --cloud-color: #f4f4fd;
-  --cornflower-color: #e7e9fc;
 }
 
+/* Base Styles */
 body {
-  font-family: var(--primary-font);
-  color: var(--primary-text-color);
-  background-color: var(--white-color);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-family: var(--primary-font); /* [cite: 42] */
+  color: var(--body-text-color); /* [cite: 47] */
+  background-color: var(--white-color); /* [cite: 48] */
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
-  margin-bottom: 0;
+/* Reset Links and Lists styling only (no layout resets) */
+a {
+  text-decoration: none;
 }
 
-ul, ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+ul {
   list-style-type: none;
 }
 
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-img {
-  display: block;
-}
-
-button {
-  cursor: pointer;
-  font-family: inherit;
-  color: currentColor;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.page-header {
-  border-bottom: 1px solid var(--cornflower-color);
-}
-
-.page-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.header-nav {
-  float: left;
-}
-
+/* Header & Logo */
 .logo {
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  margin-right: 76px;
-  display: inline-block;
-  vertical-align: middle;
+  font-family: var(--secondary-font); /* [cite: 63] */
+  font-weight: 700; /* [cite: 65] */
+  font-size: 18px; /* [cite: 66] */
+  line-height: 1.17; /* [cite: 67] */
+  letter-spacing: 0.03em; /* [cite: 68] */
+  text-transform: uppercase; /* [cite: 69] */
+  color: var(--brand-color); /* [cite: 70] */
 }
 
 .logo-part {
-  color: var(--title-text-color);
+  color: var(--primary-color); /* [cite: 76] */
 }
 
-.nav-list {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
-}
-
-.nav-item {
-  display: inline-block;
-  margin-right: 40px;
-}
-
-.nav-item:last-child {
-  margin-right: 0;
-}
-
+/* Navigation Links */
 .nav-link {
-  font-weight: 500;
-  font-size: 16px; 
-  color: var(--title-text-color);
-  padding: 24px 0;
-  display: block;
+  font-weight: 500; /* [cite: 88] */
+  font-size: 16px; /* [cite: 88] */
+  line-height: 1.5; /* [cite: 88] */
+  letter-spacing: 0.02em; /* [cite: 89] */
+  color: var(--primary-color); /* [cite: 90] */
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--active-color);
+  color: var(--pressed-color); /* [cite: 91, 92] */
 }
 
+/* Address */
 .address {
-  font-style: normal;
-  float: right;
-}
-
-.address-list {
-  font-size: 0;
-  padding: 24px 0; 
-}
-
-.address-item {
-  display: inline-block;
-  margin-left: 40px;
-}
-
-.address-item:first-child {
-  margin-left: 0;
+  font-style: normal; /* [cite: 98] */
 }
 
 .address-link {
-  font-size: 16px;
-  display: block;
+  font-size: 16px; /* [cite: 102] */
+  line-height: 1.5; /* [cite: 104] */
+  letter-spacing: 0.02em; /* [cite: 105] */
+  color: var(--body-text-color); /* [cite: 107] */
 }
 
 .address-link:hover,
 .address-link:focus {
-  color: var(--active-color);
+  color: var(--pressed-color); /* [cite: 107, 108] */
 }
 
-.hero {
-  background-color: var(--title-text-color);
-  padding: 188px 0;
-  text-align: center;
+/* Section 1: Hero */
+.hero-section {
+  background-color: var(--primary-color); /* [cite: 115] */
 }
 
 .hero-title {
-  font-size: 56px;
-  line-height: 1.07;
-  color: var(--white-color);
-  max-width: 496px;
-  margin: 0 auto 48px;
+  font-size: 56px; /* [cite: 119] */
+  line-height: 1.07; /* [cite: 120] */
+  text-align: center; /* [cite: 121] */
+  letter-spacing: 0.02em; /* [cite: 122] */
+  color: var(--white-color); /* [cite: 123] */
 }
 
 .hero-btn {
-  background-color: var(--accent-color);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--white-color);
-  border: none;
-  border-radius: 4px;
-  padding: 16px 32px;
-  min-width: 169px;
+  background-color: var(--brand-color); /* [cite: 126] */
+  font-family: var(--primary-font); /* [cite: 127] */
+  font-weight: 500; /* [cite: 128] */
+  font-size: 16px; /* [cite: 129] */
+  line-height: 1.5; /* [cite: 130] */
+  letter-spacing: 0.04em; /* [cite: 131] */
+  color: var(--white-color); /* [cite: 132] */
+  cursor: pointer; /* [cite: 135] */
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: var(--active-color);
+  background-color: var(--pressed-color); /* [cite: 133, 134] */
 }
 
-.features {
-  padding: 120px 0;
-}
-
-.features-list {
-  font-size: 0;
-}
-
-.features-item {
-  display: inline-block;
-  vertical-align: top;
-  width: calc((100% - 72px) / 4);
-  margin-right: 24px;
-  font-size: 16px;
-}
-
-.features-item:last-child {
-  margin-right: 0;
-}
+/* Section 2: Features */
+/* Note: visually-hidden class often uses restricted properties, so we just style the content */
 
 .features-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--title-text-color);
-  margin-bottom: 8px;
+  font-weight: 500; /* [cite: 142] */
+  font-size: 20px; /* [cite: 143] */
+  line-height: 1.2; /* [cite: 144] */
+  letter-spacing: 0.02em; /* [cite: 145] */
+  color: var(--primary-color); /* [cite: 146] */
 }
 
-.team {
-  background-color: var(--cloud-color);
-  padding: 120px 0;
+.features-text {
+  font-size: 16px; /* [cite: 151] */
+  line-height: 1.5; /* [cite: 152] */
+  letter-spacing: 0.02em; /* [cite: 153] */
+  color: var(--body-text-color); /* [cite: 154] */
 }
 
-.team-title {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--title-text-color);
-  margin-bottom: 72px;
+/* Section 3: Team */
+.team-section {
+  background-color: var(--cloud-color); /* [cite: 169] */
 }
 
-.team-list {
-  font-size: 0;
+.section-title {
+  font-size: 36px; /* [cite: 172] */
+  line-height: 1.11; /* [cite: 175] */
+  text-align: center; /* [cite: 176] */
+  letter-spacing: 0.02em; /* [cite: 177] */
+  text-transform: capitalize; /* [cite: 177] */
+  color: var(--primary-color);
 }
 
 .team-item {
-  background-color: var(--white-color);
-  display: inline-block;
-  vertical-align: top;
-  width: calc((100% - 72px) / 4);
-  margin-right: 24px;
-  font-size: 16px;
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team-item:last-child {
-  margin-right: 0;
+  background-color: var(--white-color); /* [cite: 184] */
 }
 
 .team-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--title-text-color);
-  text-align: center;
-  margin-bottom: 8px;
+  font-weight: 500; /* [cite: 186] */
+  font-size: 20px; /* [cite: 186] */
+  line-height: 1.2; /* [cite: 187] */
+  letter-spacing: 0.02em; /* [cite: 187] */
+  color: var(--primary-color); /* [cite: 188] */
 }
 
 .team-text {
-  text-align: center;
+  font-size: 16px; /* [cite: 192] */
+  line-height: 1.5; /* [cite: 193] */
+  letter-spacing: 0.02em; /* [cite: 205] */
+  color: var(--body-text-color); /* [cite: 206] */
 }
 
-.team-item > h3 {
-  margin-top: 32px;
-}
-
-.team-item > p {
-  margin-bottom: 32px;
-}
-
-.portfolio {
-  padding: 120px 0;
-}
-
-.portfolio-title {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-  color: var(--title-text-color);
-  margin-bottom: 72px;
-}
-
-.portfolio-list {
-  font-size: 0;
-}
-
-.portfolio-item {
-  display: inline-block;
-  vertical-align: top;
-  width: calc((100% - 48px) / 3);
-  margin-right: 24px;
-  margin-bottom: 48px;
-  font-size: 16px;
-}
-
-.portfolio-item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.portfolio-item:nth-last-child(-n+3) {
-  margin-bottom: 0;
-}
-
+/* Section 4: Portfolio */
 .portfolio-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--title-text-color);
-  margin-bottom: 8px;
+  font-weight: 500; /* [cite: 236] */
+  font-size: 20px; /* [cite: 237] */
+  line-height: 1.2; /* [cite: 241] */
+  letter-spacing: 0.02em; /* [cite: 242] */
+  color: var(--primary-color); /* [cite: 243] */
 }
 
-.portfolio-item > h3 {
-  margin-top: 32px;
+.portfolio-text {
+  font-size: 16px; /* [cite: 246] */
+  line-height: 1.5; /* [cite: 247] */
+  letter-spacing: 0.02em; /* [cite: 248] */
+  color: var(--body-text-color); /* [cite: 248] */
 }
 
-.portfolio-item > p {
-  margin-bottom: 32px;
-}
-
-.page-footer {
-  background-color: var(--title-text-color);
-  padding: 100px 0;
+/* Footer */
+.footer {
+  background-color: var(--primary-color); /* [cite: 320] */
 }
 
 .footer-logo {
-  display: inline-block;
-  margin-bottom: 16px;
-  margin-right: 0;
+  font-family: var(--secondary-font); /* [cite: 322] */
+  font-weight: 700; /* [cite: 323] */
+  font-size: 18px; /* [cite: 324] */
+  line-height: 1.17; /* [cite: 325] */
+  letter-spacing: 0.03em; /* [cite: 325] */
+  text-transform: uppercase; /* [cite: 328] */
+  color: var(--brand-color); /* [cite: 329] */
 }
 
-.logo-part-light {
-  color: var(--cloud-color);
+.footer-logo-part {
+  color: var(--cloud-color); /* [cite: 340] */
 }
 
 .footer-text {
-  color: var(--cloud-color);
-  max-width: 264px;
+  font-size: 16px;
+  line-height: 1.5; /* [cite: 339] */
+  letter-spacing: 0.02em; /* [cite: 341] */
+  color: var(--cloud-color); /* [cite: 340] */
 }
